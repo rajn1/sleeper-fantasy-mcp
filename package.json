@@ -1,0 +1,31 @@
+{
+  "name": "sleeper-fantasy-mcp",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Read-only Sleeper fantasy football MCP server for ChatGPT desktop and Codex",
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "sleeper",
+    "fantasy-football",
+    "codex",
+    "chatgpt"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "check": "npm run check:syntax && npm test",
+    "check:syntax": "node --check src/index.js && node --check src/sleeper-client.js && node --check scripts/check-connection.js",
+    "check:connection": "node scripts/check-connection.js",
+    "test": "node --test",
+    "inspect": "npx @modelcontextprotocol/inspector node src/index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/server": "^2.0.0",
+    "zod": "^4.2.0"
+  }
+}

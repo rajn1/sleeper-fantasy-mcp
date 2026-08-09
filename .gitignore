@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+.npmrc
+*.pem
+*.key
+
+# Logs and test output
+*.log
+coverage/
+.nyc_output/
+
+# Generated caches and player data
+.cache/
+players-nfl.json
+
+# Editor and OS files
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Temporary files
+*.tmp
+*.temp
